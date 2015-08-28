@@ -7,7 +7,7 @@
         this
             .height('auto')
             .each(function () {
-                thisHeight = $(this).height()
+                thisHeight = $(this).height();
                 if (thisHeight > height) {
                     height = thisHeight;
                 }
