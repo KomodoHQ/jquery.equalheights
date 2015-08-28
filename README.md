@@ -39,6 +39,8 @@ Install
 
 ### Bower
 
-``` shell
+``` bash
 $ bower install jquery-equalheights
 ```
+
+This will install jquery.equalheights and jquery into your bower directory. Include them into your build process however you see fit.
