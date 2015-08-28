@@ -1,4 +1,5 @@
-;$(function () {
+;(function ($) {
+
     $.fn.matchHeights = function() {
         var height = 0,
             thisHeight;
@@ -14,4 +15,4 @@
             .height(height);
 
     };
-});
+})($);
