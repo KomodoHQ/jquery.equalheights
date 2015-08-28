@@ -1,0 +1,27 @@
+{
+  "name": "jquery-equalheights",
+  "version": "0.0.1",
+  "authors": [
+    "OiNutter <willmckenzie@oinutter.co.uk>"
+  ],
+  "description": "jQuery plugin to equalize heights across DOM elements",
+  "main": "jquery.equalheights.js",
+  "keywords": [
+    "jquery",
+    "dom",
+    "manipulation",
+    "height"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/KomodoHQ/jquery.equalheights",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "1.11"
+  }
+}
