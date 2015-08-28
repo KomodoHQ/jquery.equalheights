@@ -47,31 +47,31 @@ You think water moves fast? You should see ice. It moves like it has a mind. Lik
     </div>
 
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src="jquery.equalheights.js"></script>
+    <script src="jquery.matchheights.js"></script>
     <script>
     ;$(function () {
-        $('.equal-height-item-1').equalHeights()
-        $('.equal-height-item-2').equalHeights()
-        $('.equal-height-item-3').equalHeights()
+        $('.equal-height-item-1').matchHeights()
+        $('.equal-height-item-2').matchHeights()
+        $('.equal-height-item-3').matchHeights()
 
         // simulate timeout
         /*setTimeout(function () {
             $('.equal-height-wrapper').width(250)
-            $('.equal-height-item-1').equalHeights()
-            $('.equal-height-item-2').equalHeights()
-            $('.equal-height-item-3').equalHeights()
+            $('.equal-height-item-1').matchHeights()
+            $('.equal-height-item-2').matchHeights()
+            $('.equal-height-item-3').matchHeights()
         },5000)*/
 
-        
+
         $(window).on('resize', function () {
-            $('.equal-height-item-1').equalHeights()
-            $('.equal-height-item-2').equalHeights()
-            $('.equal-height-item-3').equalHeights()
+            $('.equal-height-item-1').matchHeights()
+            $('.equal-height-item-2').matchHeights()
+            $('.equal-height-item-3').matchHeights()
         })
 
         // call like this for items wrapped in the same parent
         /*$('.equal-height-wrapper').each(function () {
-            $(this).find('.equal-height-item').equalHeights()
+            $(this).find('.equal-height-item').matchHeights()
         })*/
     });
     </script>

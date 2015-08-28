@@ -1,5 +1,5 @@
 ;$(function () {
-    $.fn.equalHeights = function() {
+    $.fn.matchHeights = function() {
         var height = 0,
             thisHeight;
 
