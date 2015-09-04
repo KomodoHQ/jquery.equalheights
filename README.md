@@ -23,7 +23,7 @@ $('.some-wrapper-class').each(function () {
 })
 ```
 
-If you're DOM structure is such that all your elements that need to be the same height are siblings
+If your DOM structure is such that all your elements that need to be the same height are siblings
 you can use the above snippet instead of calling `matchHeights` on every single group of elements on
 the page.
 
