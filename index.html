@@ -4,11 +4,12 @@
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Jquery.matchheights : jQuery plugin to equalize heights across DOM elements">
+    <meta name="description" content="jQuery.matchHeights : jQuery plugin to equalise heights across DOM elements">
 
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/styles/github.min.css">
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-    <title>Jquery.matchheights</title>
+    <title>jquery.matchHeights</title>
   </head>
 
   <body>
@@ -18,8 +19,8 @@
         <header class="inner">
           <a id="forkme_banner" href="https://github.com/KomodoHQ/jquery.matchheights">View on GitHub</a>
 
-          <h1 id="project_title">Jquery.matchheights</h1>
-          <h2 id="project_tagline">jQuery plugin to equalize heights across DOM elements</h2>
+          <h1 id="project_title">jQuery.matchHeights</h1>
+          <h2 id="project_tagline">jQuery plugin to equalise heights across DOM elements</h2>
 
             <section id="downloads">
               <a class="zip_download_link" href="https://github.com/KomodoHQ/jquery.matchheights/zipball/master">Download this project as a .zip file</a>
@@ -30,59 +31,329 @@
 
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h1>
-<a id="jqueryequalheights" class="anchor" href="#jqueryequalheights" aria-hidden="true"><span class="octicon octicon-link"></span></a>jquery.equalHeights</h1>
+        <section id="main_content" class="inner">
+            <h1>
+                <a id="jqueryequalheights" class="anchor" href="#jqueryequalheights" aria-hidden="true">
+                    <span class="octicon octicon-link"></span>
+                </a>
+                jquery.equalHeights
+            </h1>
 
-<p>jquery.equalHeights is a crazy simple jquery plugin to set a group of elements to the same height.</p>
+            <p>
+                jquery.equalHeights is a crazy simple jquery plugin to set a group of elements to the
+                same height.
+            </p>
 
-<p>We end up having to do this on a lot of sites to keep things looking neat no matter what user
-generated content gets added to the site, so it made sense to make it a bit more reusable, and we
-figured there were other people in the same boat as us, so we made it open source.</p>
+            <p>
+                We end up having to do this on a lot of sites to keep things looking neat no matter what
+                user generated content gets added to the site, so it made sense to make it a bit more
+                reusable, and we figured there were other people in the same boat as us, so we made it
+                open source.
+            </p>
 
-<h2>
-<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+            <h2>
+                <a id="usage" class="anchor" href="#usage" aria-hidden="true">
+                    <span class="octicon octicon-link"></span>
+                </a>
+                Usage
+            </h2>
 
-<div class="highlight highlight-javascript"><pre>$(<span class="pl-s"><span class="pl-pds">'</span>.some-css-selector<span class="pl-pds">'</span></span>).equalHeights()</pre></div>
+            <pre><code>
+$('.some-css-selector').equalHeights()
+            </code></pre>
 
-<p>This will find the tallest of all the items with the provided selector and set all the elements to
-the same height as it.</p>
+            <p>
+                This will find the tallest of all the items with the provided selector and set all the
+                elements to the same height as it.
+            </p>
 
-<div class="highlight highlight-javascript"><pre>$(<span class="pl-s"><span class="pl-pds">'</span>.some-wrapper-class<span class="pl-pds">'</span></span>).each(<span class="pl-k">function</span> () {
-    $(<span class="pl-v">this</span>).<span class="pl-c1">find</span>(<span class="pl-s"><span class="pl-pds">'</span>.some-css-selector<span class="pl-pds">'</span></span>).equalHeights()
-})</pre></div>
+            <pre><code>
+$('.some-wrapper-class').each(function () {
+    $(this).find('.some-css-selector').equalHeights()
+})
+            </code></pre>
 
-<p>If you're DOM structure is such that all your elements that need to be the same height are siblings
-you can use the above snippet instead of calling <code>equalHeights</code> on every single group of elements on
-the page.</p>
+            <p>
+                If your DOM structure is such that all your elements that need to be the same height are
+                siblings you can use the above snippet instead of calling <code>equalHeights</code> on
+                every single group of elements on the page.
+            </p>
 
-<h2>
-<a id="install" class="anchor" href="#install" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install</h2>
+            <h2>
+                <a id="install" class="anchor" href="#install" aria-hidden="true">
+                    <span class="octicon octicon-link"></span>
+                </a>
+                Install
+            </h2>
 
-<h3>
-<a id="old-school" class="anchor" href="#old-school" aria-hidden="true"><span class="octicon octicon-link"></span></a>Old School</h3>
+            <h3>
+                <a id="old-school" class="anchor" href="#old-school" aria-hidden="true">
+                    <span class="octicon octicon-link"></span>
+                </a>
+                Old School
+            </h3>
 
-<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>/path/to/jquery.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
-&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>/path/to/jquery.equalheights.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</pre></div>
+            <pre><code>
+&lt;script src="/path/to/jquery.js"&gt;&lt;/script&gt;
+&lt;script src="/path/to/jquery.equalheights.js"&gt;&lt;/script&gt;
+            </code></pre>
 
-<h3>
-<a id="bower" class="anchor" href="#bower" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bower</h3>
+            <h3>
+                <a id="bower" class="anchor" href="#bower" aria-hidden="true">
+                    <span class="octicon octicon-link"></span>
+                </a>
+                Bower
+            </h3>
 
-<div class="highlight highlight-bash"><pre>$ bower install jquery-equalheights</pre></div>
+            <pre><code class="bash">
+$ bower install jquery-equalheights
+            </code></pre>
 
-<p>This will install jquery.equalheights and jquery into your bower directory. Include them into your build process however you see fit.</p>
-      </section>
+            <p>
+                This will install jquery.equalheights and jquery into your bower directory. Include them
+                in your build process however you see fit.
+            </p>
+
+            <h2>
+                <a id="examples" class="anchor" href="#examples" aria-hidden="true">
+                    <span class="octicon octicon-link"></span>
+                </a>
+                Examples
+            </h2>
+
+            <h3>
+                <a id="basic-example" class="anchor" href="#basic-example" aria-hidden="true">
+                    <span class="octicon octicon-link"></span>
+                </a>
+                Basic
+            </h3>
+
+            <h5>HTML</h5>
+            <pre><code>
+&lt;div class="e1-item item"&gt;
+    OK. Moss, what did you have for breakfast...
+&lt;/div&gt;
+&lt;div class="e1-item item"&gt;
+    They just toss us away like yesterday's jam...
+&lt;/div&gt;
+&lt;div class="e1-item item"&gt;
+    I am a man, he's a man, we're men! Ok...
+&lt;/div&gt;
+&lt;div class="e1-item item"&gt;
+    Hello, IT. Have you tried turning it off...
+&lt;/div&gt;
+&lt;div class="e1-item item"&gt;
+    While he was eating, did you hear anyone laughing?...
+&lt;/div&gt;
+&lt;div class="e1-item item"&gt;
+    Dear Sir stroke Madam. Fire, exclamation...
+&lt;/div&gt;
+            </code></pre>
+
+            <h5>Javascript</h5>
+            <pre><code>$('.e1-item').matchHeights()</code></pre>
+
+            <p>Set all divs of the given class to the same height as the tallest one</p>
+
+            <div class="e1-item item">
+                OK. Moss, what did you have for breakfast this morning? Smarties cereal. He's had quite an evening.
+            </div>
+            <div class="e1-item item">
+                They just toss us away like yesterday's jam. How long have you been disabled? Ten years? Ten years, and how did it happen? If that's not a rude question.
+            </div>
+            <div class="e1-item item">
+                I am a man, he's a man, we're men! Ok, tell me how your feeling. I feel delicate...
+            </div>
+
+            <div class="e1-item item">
+                Hello, IT. Have you tried turning it off and on again?.
+            </div>
+            <div class="e1-item item">
+                While he was eating, did you hear anyone laughing? Like... in the kitchen area?
+            </div>
+            <div class="e1-item item">
+                Dear Sir stroke Madam. Fire, exclamation mark. Fire, exclamation mark. Help me, exclamation mark. 123 Carrendon Road.
+            </div>
+
+            <br class="clear-both"/>
+
+            <h3>
+                <a id="columns-example" class="anchor" href="#columns-example" aria-hidden="true">
+                    <span class="octicon octicon-link"></span>
+                </a>
+                Columns
+            </h3>
+
+            <h5>HTML</h5>
+            <pre><code>
+&lt;div class="equal-height-column"&gt;
+    &lt;div class="e2-item-1 item"&gt;
+        OK. Moss, what did you have for breakfast...
+    &lt;/div&gt;
+    &lt;div class="e2-item-2 item"&gt;
+        They just toss us away like yesterday's jam...
+    &lt;/div&gt;
+    &lt;div class="e2-item-3 item"&gt;
+        I am a man, he's a man, we're men! Ok...
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="equal-height-column"&gt;
+    &lt;div class="e2-item-1 item"&gt;
+        Hello, IT. Have you tried turning it off...
+    &lt;/div&gt;
+    &lt;div class="e2-item-2 item"&gt;
+        While he was eating, did you hear anyone laughing?...
+    &lt;/div&gt;
+    &lt;div class="e2-item-3 item"&gt;
+        Dear Sir stroke Madam. Fire, exclamation...
+    &lt;/div&gt;
+&lt;/div&gt;
+            </code></pre>
+
+            <h5>Javascript</h5>
+            <pre><code>
+$('.e2-item-1').matchHeights()
+$('.e2-item-2').matchHeights()
+            </code></pre>
+
+            <p>
+                Sets matching divs in different parents to the same height. Handy for equalising
+                items in a column layout. The last items in each column have been left alone to
+                highlight that not only specified elements are equalised.
+            </p>
+
+            <div class="equal-height-column">
+                <div class="e2-item-1 item">
+                    OK. Moss, what did you have for breakfast this morning? Smarties cereal. He's had quite an evening.
+                </div>
+                <div class="e2-item-2 item">
+                    They just toss us away like yesterday's jam. How long have you been disabled? Ten years? Ten years, and how did it happen? If that's not a rude question.
+                </div>
+                <div class="e2-item-3 item">
+                    I am a man, he's a man, we're men! Ok, tell me how your feeling. I feel delicate...
+                </div>
+            </div>
+
+            <div class="equal-height-column">
+                <div class="e2-item-1 item">
+                    Hello, IT. Have you tried turning it off and on again?.
+                </div>
+                <div class="e2-item-2 item">
+                    While he was eating, did you hear anyone laughing? Like... in the kitchen area?
+                </div>
+                <div class="e2-item-3 item">
+                    Dear Sir stroke Madam. Fire, exclamation mark. Fire, exclamation mark. Help me, exclamation mark. 123 Carrendon Road.
+                </div>
+            </div>
+
+            <br class="clear-both"/>
+
+            <h3>
+                <a id="siblings-example" class="anchor" href="#siblings-example" aria-hidden="true">
+                    <span class="octicon octicon-link"></span>
+                </a>
+                Siblings
+            </h3>
+
+            <h5>HTML</h5>
+            <pre><code>
+&lt;div class="equal-height-wrapper"&gt;
+    &lt;div class="e3-item item"&gt;
+        OK. Moss, what did you have for breakfast...
+    &lt;/div&gt;
+    &lt;div class="e3-item item"&gt;
+        They just toss us away like yesterday's jam...
+    &lt;/div&gt;
+    &lt;div class="e3-item item"&gt;
+        I am a man, he's a man, we're men! Ok...
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="equal-height-wrapper"&gt;
+    &lt;div class="e3-item item"&gt;
+        Hello, IT. Have you tried turning it off...
+    &lt;/div&gt;
+    &lt;div class="e3-item item"&gt;
+        While he was eating, did you hear anyone laughing?...
+    &lt;/div&gt;
+    &lt;div class="e3-item item"&gt;
+        Dear Sir stroke Madam. Fire, exclamation...
+    &lt;/div&gt;
+&lt;/div&gt;
+            </code></pre>
+
+            <h5>Javascript</h5>
+            <pre><code>
+$('.equal-height-wrapper').each(function () {
+    $(this).find('.e3-item').matchHeights()
+})
+            </code></pre>
+
+            <p>
+                Sets sibling elements to the same height.
+            </p>
+
+            <div class="equal-height-wrapper">
+                <div class="e3-item item">
+                    OK. Moss, what did you have for breakfast this morning? Smarties cereal. He's had quite an evening.
+                </div>
+                <div class="e3-item item">
+                    They just toss us away like yesterday's jam. How long have you been disabled? Ten years? Ten years, and how did it happen? If that's not a rude question.
+                </div>
+                <div class="e3-item item">
+                    I am a man, he's a man, we're men! Ok, tell me how your feeling. I feel delicate...
+                </div>
+                <br class="clear-both"/>
+            </div>
+
+            <div class="equal-height-wrapper">
+                <div class="e3-item item">
+                    Hello, IT. Have you tried turning it off and on again?.
+                </div>
+                <div class="e3-item item">
+                    While he was eating, did you hear anyone laughing? Like... in the kitchen area?
+                </div>
+                <div class="e3-item item">
+                    Dear Sir stroke Madam. Fire, exclamation mark. Fire, exclamation mark. Help me, exclamation mark. 123 Carrendon Road.
+                </div>
+                <br class="clear-both"/>
+            </div>
+
+            <br class="clear-both"/>
+        </section>
     </div>
 
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">
-        <p class="copyright">Jquery.matchheights maintained by <a href="https://github.com/KomodoHQ">KomodoHQ</a></p>
+        <p class="copyright">jquery.matchHeights maintained by <a href="https://github.com/KomodoHQ">KomodoHQ</a></p>
         <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
 
-    
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="javascripts/jquery.matchheights.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/highlight.min.js"></script>
+    <script>
+        $(function () {
 
-  </body>
+            // Code highlighting
+            hljs.initHighlightingOnLoad();
+
+            // Example 1
+            $('.e1-item').matchHeights();
+
+            // Example 2
+            $('.e2-item-1').matchHeights();
+            $('.e2-item-2').matchHeights();
+
+            $('.equal-height-wrapper').each(function () {
+                $(this).find('.e3-item').matchHeights();
+            });
+
+        });
+    </script>
+
+</body>
 </html>

@@ -172,14 +172,13 @@ pre, code {
 
 pre {
   width: 100%;
-  padding: 10px;
+  padding: 0;
   box-shadow: 0 0 10px rgba(0,0,0,.1);
-  overflow: auto;
 }
 
 code {
-  padding: 3px;
-  margin: 0 3px;
+  padding: 10px;
+  margin: 0;
   box-shadow: 0 0 10px rgba(0,0,0,.1);
 }
 
@@ -422,4 +421,38 @@ Small Device Styles
     font-size: 11px;
   }
 
+}
+
+.equal-height-wrapper {
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    background:#fff;
+    margin:10px 0;
+}
+
+.equal-height-column {
+    width:320px;
+    float:left;
+}
+
+.item {
+    background:#212121;
+    color:#fff;
+    font-size:12px;
+    margin:10px;
+    padding:10px;
+    width:170px;
+    float:left;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+
+.equal-height-column .item {
+    float:none;
+    width:280px;
+}
+
+.clear-both{
+    display:block;
+    clear:both;
+    height:1px;
+    visibility: hidden;
 }
